@@ -1,9 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {useNavigate, useParams} from 'react-router-dom';
-import {API, isMobile, showError, showInfo, showSuccess, verifyJSON} from '../../helpers';
-import {CHANNEL_OPTIONS} from '../../constants';
+import { Banner, Button, Checkbox, Input, Select, SideSheet, Space, Spin, TextArea, Typography } from "@douyinfe/semi-ui";
 import Title from "@douyinfe/semi-ui/lib/es/typography/title";
-import {SideSheet, Space, Spin, Button, Input, Typography, Select, TextArea, Checkbox, Banner} from "@douyinfe/semi-ui";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { CHANNEL_OPTIONS } from '../../constants';
+import { API, isMobile, showError, showInfo, showSuccess, verifyJSON } from '../../helpers';
 
 const MODEL_MAPPING_EXAMPLE = {
     'gpt-3.5-turbo-0301': 'gpt-3.5-turbo',
@@ -72,7 +72,7 @@ const EditChannel = (props) => {
                     localModels = ['ERNIE-Bot', 'ERNIE-Bot-turbo', 'ERNIE-Bot-4', 'Embedding-V1'];
                     break;
                 case 17:
-                    localModels = ["qwen-turbo", "qwen-plus", "qwen-max", "qwen-max-longcontext", 'text-embedding-v1'];
+                    localModels = ["qwen-turbo", "qwen-plus", "qwen-max", "qwen-max-longcontext", 'text-embedding-v1', "qwen-1.5-32b-Chat", "qwen-1.5-72b-Chat"];
                     break;
                 case 16:
                     localModels = ['chatglm_pro', 'chatglm_std', 'chatglm_lite'];

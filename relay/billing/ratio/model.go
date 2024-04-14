@@ -2,8 +2,9 @@ package ratio
 
 import (
 	"encoding/json"
-	"github.com/songquanpeng/one-api/common/logger"
 	"strings"
+
+	"github.com/songquanpeng/one-api/common/logger"
 )
 
 const (
@@ -110,6 +111,8 @@ var ModelRatio = map[string]float64{
 	"qwen-plus":                 1.4286, // ￥0.02 / 1k tokens
 	"qwen-max":                  1.4286, // ￥0.02 / 1k tokens
 	"qwen-max-longcontext":      1.4286, // ￥0.02 / 1k tokens
+	"qwen-1.5-32b-Chat":         0.0001, // 限时免费
+	"qwen-1.5-72b-Chat":         1.4286, // ￥0.02 / 1k tokens
 	"text-embedding-v1":         0.05,   // ￥0.0007 / 1k tokens
 	"ali-stable-diffusion-xl":   8,
 	"ali-stable-diffusion-v1.5": 8,
